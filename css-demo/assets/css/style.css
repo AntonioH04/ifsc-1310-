@@ -9,11 +9,22 @@ html{
 *:after {
     box-sizing: inherit;
 }
+
+/* -------------utility classes---------------- */
+
+.container{
+    width: 80vw;
+    max-width: 960px;
+    margin:40px auto;
+}
+
+
 body {
     font-family: "Oswald", serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    margin: 0;
   }
 /* Color Theme Swatches in Hex */
 .VIPP-Primary-Colors-1-hex { color: #258B43; }
@@ -62,12 +73,52 @@ header.primary h2{
 nav.primary{}
 nav.primary ul{
     padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 960px;
+    margin:20px auto;
 }
 nav.primary ul li{
     list-style-type:none;
 }
 nav.primary ul li a{
     color: #ffffff;
+    font-size: .9rem;
+    text-decoration: none;
+    border: 1px solid #313131;
+    padding: 5px 10px;
+    background-color: #000;
+    background-color: rgba(0,0,0,.4);
+    border-radius: 20px;
+    transition: .4s;
 }
 
+nav.primary ul li a:hover{
+background-color: rgba(0,0,0,.8);
+}
+
+#content{}
+
+#content h2{
+    color: #1883BF;
+    border-bottom: 1px dotted darkgrey;
+}
+#content h3{
+border-left: 7.5px solid #1883BF;
+padding: 5px 0 5px 10px;
+}
+
+@media screen and (max-width:440px){
+
+nav.primary ul{
+    flex-direction:column ;
+    gap: 10px;
+    max-width: 200px;
+    margin: 20px auto;
+}
+nav.primary ul li a{
+    display: block;
+}
+}
 
